@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import {
   Download,
   User,
@@ -34,6 +33,10 @@ const QUALITY_LABELS: Record<string, string> = {
   thumb: "Thumbnail",
 };
 
+function proxyUrl(url: string) {
+  return `/api/proxy-image?url=${encodeURIComponent(url)}`;
+}
+
 export function MediaPreview({ result }: MediaPreviewProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [downloading, setDownloading] = useState<Record<number, boolean>>({});
@@ -41,7 +44,7 @@ export function MediaPreview({ result }: MediaPreviewProps) {
 
   const activeItem = result.items[activeIndex];
   const isCarousel = result.items.length > 1;
-
+  
   async function triggerDownload(item: MediaItem, index: number) {
     if (downloading[index]) return;
     setDownloading((prev) => ({ ...prev, [index]: true }));
@@ -50,21 +53,20 @@ export function MediaPreview({ result }: MediaPreviewProps) {
     const filename = `insta-${Date.now()}.${ext}`;
 
     try {
-      const res = await fetch(
-        `/api/proxy-download?url=${encodeURIComponent(item.url)}`
-      );
-      if (!res.ok) throw new Error("Proxy failed");
+      const res = await fetch(`/api/proxy-image?url=${encodeURIComponent(item.url)}`);
+      if (!res.ok) throw new Error("Failed");
 
       const blob = await res.blob();
-      const objectUrl = URL.createObjectURL(blob);
+      const blobUrl = URL.createObjectURL(blob);
 
       const a = document.createElement("a");
-      a.href = objectUrl;
+      a.href = blobUrl;
       a.download = filename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      setTimeout(() => URL.revokeObjectURL(objectUrl), 5000);
+
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
     } catch {
       window.open(item.url, "_blank", "noopener,noreferrer");
     } finally {
@@ -107,7 +109,7 @@ export function MediaPreview({ result }: MediaPreviewProps) {
           <video
             key={activeItem.url}
             src={activeItem.url}
-            poster={activeItem.thumbnail}
+            poster={activeItem.thumbnail ? proxyUrl(activeItem.thumbnail) : undefined}
             controls
             playsInline
             className="w-full h-full object-contain"
@@ -119,14 +121,11 @@ export function MediaPreview({ result }: MediaPreviewProps) {
             <p className="text-xs opacity-60">Download करा पाहण्यासाठी</p>
           </div>
         ) : (
-          <Image
+          <img
             key={activeItem.url}
-            src={activeItem.url}
+            src={proxyUrl(activeItem.url)}
             alt={result.caption ?? "Instagram media"}
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 600px"
-            unoptimized
+            className="w-full h-full object-contain"
             onError={() =>
               setImgError((prev) => ({ ...prev, [activeIndex]: true }))
             }
