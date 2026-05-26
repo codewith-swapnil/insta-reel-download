@@ -1,126 +1,185 @@
-/**
- * Instagram Downloader Service
- *
- * This is a pure-frontend implementation that uses public Instagram
- * oEmbed endpoints and third-party aggregator APIs (no backend needed).
- *
- * NOTE: Instagram's actual media download requires server-side cookies.
- * This module simulates the flow and returns mock data for UI demonstration.
- * In production, connect to a proxy API (e.g., RapidAPI Instagram endpoints).
- */
-
 import { cleanInstagramUrl, detectContentType } from "./utils";
-import type { DownloadResult, ContentType } from "./types";
+import type { DownloadResult, ContentType, MediaItem } from "./types";
 
-/* ─── Public oEmbed for metadata ──────────────────────── */
-async function fetchOembed(url: string): Promise<{ thumbnail_url?: string; author_name?: string; title?: string } | null> {
-  try {
-    const res = await fetch(
-      `https://api.instagram.com/oembed/?url=${encodeURIComponent(url)}&omitscript=true`,
-      { next: { revalidate: 3600 } }
-    );
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
+// ─── API response types (actual shape from the free API) ──────────────────────
+
+interface ApiMediaItem {
+  type: "image" | "video";
+  download_url: string;
+  thumb?: string;
+  width?: number;
+  height?: number;
+  duration?: number;
+}
+
+interface ApiResponse {
+  error: boolean | string;
+  hosting?: string;
+  shortcode?: string;
+  caption?: string;
+  audio?: string | null;
+  type?: "album" | "video" | "image" | "reel" | "story";
+  username?: string;
+  full_name?: string;
+  medias?: ApiMediaItem[];
+  // fallback fields some APIs also return
+  download_url?: string;
+  thumb?: string;
+}
+
+// ─── Error helper — always satisfies DownloadResult shape ────────────────────
+
+function errorResult(message: string): DownloadResult {
+  return {
+    success: false,
+    contentType: "unknown",
+    items: [],
+    error: message,
+  };
+}
+
+// ─── Map API "type" → ContentType ────────────────────────────────────────────
+
+function mapContentType(apiType?: string, fallback?: ContentType): ContentType {
+  switch (apiType) {
+    case "album":     return "carousel";
+    case "reel":      return "reel";
+    case "video":     return "video";
+    case "image":     return "photo";
+    case "story":     return "story";
+    default:          return fallback ?? "unknown";
   }
 }
 
-/**
- * Main download function.
- * Tries oEmbed for metadata; returns a structured result.
- * Replace `buildMockResult` with a real API call in production.
- */
+// ─── Parse the actual API response ──────────────────────────────────────────
+
+function parseApiResponse(data: ApiResponse, urlContentType: ContentType): DownloadResult {
+  // API-level error
+  if (data.error === true || typeof data.error === "string") {
+    return errorResult(
+      typeof data.error === "string" ? data.error : "API returned an error"
+    );
+  }
+
+  const contentType = mapContentType(data.type, urlContentType);
+
+  // ── Album / Carousel ──────────────────────────────────────────────────────
+  if (data.type === "album" && Array.isArray(data.medias) && data.medias.length > 0) {
+    const items: MediaItem[] = data.medias.map((m) => ({
+      url: m.download_url,
+      type: m.type,
+      quality: "hd",
+      width: m.width,
+      height: m.height,
+      thumbnail: m.thumb,
+      duration: m.duration,
+    }));
+
+    return {
+      success: true,
+      contentType: "carousel",
+      caption: data.caption ?? "",
+      author: data.full_name ?? data.username ?? "Instagram User",
+      authorUsername: data.username ?? "",
+      thumbnail: items[0]?.thumbnail,
+      items,
+    };
+  }
+
+  // ── Single video / reel / story ───────────────────────────────────────────
+  if (
+    (data.type === "video" || data.type === "reel" || data.type === "story") &&
+    Array.isArray(data.medias) &&
+    data.medias.length > 0
+  ) {
+    const items: MediaItem[] = data.medias.map((m, i) => ({
+      url: m.download_url,
+      type: m.type,
+      quality: i === 0 ? "hd" : "sd",
+      width: m.width,
+      height: m.height,
+      thumbnail: m.thumb,
+      duration: m.duration,
+    }));
+
+    return {
+      success: true,
+      contentType,
+      caption: data.caption ?? "",
+      author: data.full_name ?? data.username ?? "Instagram User",
+      authorUsername: data.username ?? "",
+      thumbnail: items[0]?.thumbnail,
+      items,
+    };
+  }
+
+  // ── Single image ──────────────────────────────────────────────────────────
+  if (data.type === "image" && Array.isArray(data.medias) && data.medias.length > 0) {
+    const m = data.medias[0];
+    return {
+      success: true,
+      contentType: "photo",
+      caption: data.caption ?? "",
+      author: data.full_name ?? data.username ?? "Instagram User",
+      authorUsername: data.username ?? "",
+      thumbnail: m.thumb,
+      items: [
+        {
+          url: m.download_url,
+          type: "image",
+          quality: "hd",
+          width: m.width,
+          height: m.height,
+          thumbnail: m.thumb,
+        },
+      ],
+    };
+  }
+
+  // ── Flat fallback (some APIs return download_url at root) ─────────────────
+  if (data.download_url) {
+    return {
+      success: true,
+      contentType,
+      caption: data.caption ?? "",
+      author: data.full_name ?? data.username ?? "Instagram User",
+      authorUsername: data.username ?? "",
+      thumbnail: data.thumb,
+      items: [
+        {
+          url: data.download_url,
+          type: contentType === "reel" || contentType === "video" ? "video" : "image",
+          quality: "hd",
+          thumbnail: data.thumb,
+        },
+      ],
+    };
+  }
+
+  return errorResult("No downloadable media found in API response");
+}
+
+// ─── Main export ─────────────────────────────────────────────────────────────
+
 export async function fetchInstagramMedia(rawUrl: string): Promise<DownloadResult> {
   const url = cleanInstagramUrl(rawUrl);
   const contentType = detectContentType(url) as ContentType;
 
-  // 1. Try Instagram oEmbed for real metadata
-  const oembed = await fetchOembed(url);
+  try {
+    const res = await fetch("/api/instagram", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url }),
+    });
 
-  // 2. Build result (in production: call your proxy/API here)
-  if (oembed) {
-    return buildResultFromOembed(oembed, url, contentType);
+    if (!res.ok) {
+      return errorResult(`Server error: ${res.status}`);
+    }
+
+    const data: ApiResponse = await res.json();
+    return parseApiResponse(data, contentType);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Network error";
+    return errorResult(message);
   }
-
-  // 3. Fallback: return demo data so the UI flow works
-  return buildDemoResult(contentType, url);
-}
-
-/* ─── Build from oEmbed ───────────────────────────────── */
-function buildResultFromOembed(
-  oembed: { thumbnail_url?: string; author_name?: string; title?: string },
-  url: string,
-  contentType: ContentType
-): DownloadResult {
-  const isVideo = contentType === "reel" || contentType === "video";
-  return {
-    success: true,
-    contentType,
-    caption: oembed.title ?? "",
-    author: oembed.author_name ?? "Instagram User",
-    authorUsername: oembed.author_name?.toLowerCase().replace(/\s+/g, "_") ?? "user",
-    thumbnail: oembed.thumbnail_url,
-    items: [
-      {
-        url: isVideo
-          ? "https://example.com/video.mp4" // proxy replaces this
-          : oembed.thumbnail_url ?? "https://example.com/photo.jpg",
-        type: isVideo ? "video" : "image",
-        quality: "hd",
-        width: isVideo ? 1080 : 1080,
-        height: isVideo ? 1920 : 1080,
-        thumbnail: oembed.thumbnail_url,
-      },
-    ],
-  };
-}
-
-/* ─── Demo result for UI showcase ────────────────────── */
-function buildDemoResult(contentType: ContentType, url: string): DownloadResult {
-  const isVideo = contentType === "reel" || contentType === "video";
-  const isCarousel = url.includes("carousel") || Math.random() > 0.7;
-
-  if (isCarousel && contentType === "photo") {
-    return {
-      success: true,
-      contentType: "carousel",
-      caption: "Beautiful moments captured ✨ #photography #lifestyle",
-      author: "Creative Studio",
-      authorUsername: "creativestudio",
-      thumbnail: "https://picsum.photos/seed/insta1/800/800",
-      items: [
-        { url: "https://picsum.photos/seed/insta1/1080/1080", type: "image", quality: "hd", width: 1080, height: 1080 },
-        { url: "https://picsum.photos/seed/insta2/1080/1080", type: "image", quality: "hd", width: 1080, height: 1080 },
-        { url: "https://picsum.photos/seed/insta3/1080/1080", type: "image", quality: "hd", width: 1080, height: 1080 },
-      ],
-    };
-  }
-
-  if (isVideo) {
-    return {
-      success: true,
-      contentType,
-      caption: "Check out this amazing reel! 🎬 #reels #viral",
-      author: "Content Creator",
-      authorUsername: "contentcreator",
-      thumbnail: "https://picsum.photos/seed/reel1/720/1280",
-      items: [
-        { url: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4", type: "video", quality: "hd", width: 720, height: 1280, thumbnail: "https://picsum.photos/seed/reel1/720/1280", duration: 30 },
-        { url: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4", type: "video", quality: "sd", width: 480, height: 854, thumbnail: "https://picsum.photos/seed/reel1/480/854", duration: 30 },
-      ],
-    };
-  }
-
-  return {
-    success: true,
-    contentType: "photo",
-    caption: "Stunning photography 📸 #photo #nature",
-    author: "Photo Artist",
-    authorUsername: "photoartist",
-    thumbnail: "https://picsum.photos/seed/photo1/1080/1080",
-    items: [
-      { url: "https://picsum.photos/seed/photo1/1080/1080", type: "image", quality: "hd", width: 1080, height: 1080 },
-    ],
-  };
 }
