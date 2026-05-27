@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const SITE_URL = "https://instadl.pro";
 const SITE_NAME = "InstaDL — Instagram Downloader";
@@ -110,6 +111,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased" suppressHydrationWarning>
+        <Analytics />
         <Navbar />
         <main>{children}</main>
         <Footer />
