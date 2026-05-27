@@ -8,7 +8,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "URL required" }, { status: 400 });
     }
 
-    const response = await fetch("http://localhost:5000/api/download", {
+    // Use environment variable with a fallback for local development
+    const backendUrl = process.env.BACKEND_URL || "http://localhost:5000";
+    const response = await fetch(`${backendUrl}/api/download`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url }),
