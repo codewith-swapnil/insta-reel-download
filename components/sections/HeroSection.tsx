@@ -69,7 +69,7 @@ export function HeroSection() {
         {/* Status badge */}
         <div
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-[#9090a8] mb-8"
-          aria-label="InstaDL is free, requires no account, and adds no watermarks"
+          aria-label="InstaSaverHub is free, requires no account, and adds no watermarks"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
           Free · No account needed · No watermark
@@ -128,7 +128,7 @@ export function HeroSection() {
         {/* ✅ Social proof stats — E-E-A-T Authority signals */}
         <div
           className="mt-12 grid grid-cols-3 gap-8 sm:gap-16"
-          aria-label="InstaDL usage statistics"
+          aria-label="InstaSaverHub usage statistics"
         >
           {STATS.map((stat) => (
             <div key={stat.label} className="text-center">

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://instadl.pro/sitemap.xml",
-    host: "https://instadl.pro",
+    sitemap: "https://instasaverhub.vercel.app/sitemap.xml",
+    host: "https://instasaverhub.vercel.app",
   };
 }

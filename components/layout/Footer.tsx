@@ -38,7 +38,7 @@ export function Footer() {
               Videos, Photos, Carousels, and Highlights with one click.
             </p>
             <p className="mt-4 text-xs text-[#55555f]">
-              InstaDL is not affiliated with Instagram or Meta Platforms, Inc.
+              InstaSaverHub is not affiliated with Instagram or Meta Platforms, Inc.
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#55555f] text-xs">
-            © {year} InstaDL. All rights reserved.
+            © {year} InstaSaverHub. All rights reserved.
           </p>
           <p className="text-[#55555f] text-xs flex items-center gap-1.5">
             Made with <Heart className="w-3 h-3 text-[#f72585]" fill="currentColor" /> for content creators

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Shield, Zap, Lock, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About InstaDL — Free Instagram Downloader",
+  title: "About InstaSaverHub — Free Instagram Downloader",
   description:
-    "Learn about InstaDL — a free, fast, and privacy-respecting Instagram media downloader for Reels, Videos, Photos, and Highlights.",
+    "Learn about InstaSaverHub — a free, fast, and privacy-respecting Instagram media downloader for Reels, Videos, Photos, and Highlights.",
   alternates: { canonical: "/about" },
 };
 
@@ -23,7 +23,7 @@ const VALUES = [
   {
     icon: <Shield className="w-5 h-5" />,
     title: "Always Free",
-    description: "InstaDL has been and always will be completely free for personal use.",
+    description: "InstaSaverHub has been and always will be completely free for personal use.",
   },
   {
     icon: <Heart className="w-5 h-5" />,
@@ -43,7 +43,7 @@ export default function AboutPage() {
             We Make Saving Instagram Content Simple
           </h1>
           <p className="text-[#9090a8] text-lg leading-relaxed">
-            InstaDL was built for content creators, marketers, and everyday users who want a
+            InstaSaverHub was built for content creators, marketers, and everyday users who want a
             fast, clean way to save public Instagram media — without signing up for anything.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <h2 className="font-display font-semibold text-white text-2xl mb-4">Our Mission</h2>
           <p className="text-[#9090a8] leading-relaxed">
             The internet should be simple. Downloading a video you want to save offline shouldn't
-            require creating an account, installing an app, or sitting through ads. InstaDL exists
+            require creating an account, installing an app, or sitting through ads. InstaSaverHub exists
             to give you a no-nonsense tool that just works — every time.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
         <div className="p-6 rounded-2xl bg-amber-500/5 border border-amber-500/20">
           <h2 className="font-display font-semibold text-amber-400 mb-3">Important Disclaimer</h2>
           <p className="text-[#9090a8] text-sm leading-relaxed">
-            InstaDL is not affiliated with, endorsed by, or connected to Instagram or Meta
+            InstaSaverHub is not affiliated with, endorsed by, or connected to Instagram or Meta
             Platforms, Inc. This tool is intended for downloading public content for personal use
             only. Always respect the intellectual property rights of content creators. Do not use
             downloaded content for commercial purposes without the creator's permission.

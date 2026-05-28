@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Instagram Reels Downloader — Free HD Download",
     description: "Download any public Instagram Reel in HD. No login, no watermark.",
-    url: "https://instadl.pro/instagram-reels-downloader",
+    url: "https://instasaverhub.vercel.app/instagram-reels-downloader",
   },
 };
 
@@ -18,14 +18,14 @@ const SEO_CONTENT = (
   <>
     <h2 className="font-display font-bold text-white text-2xl">How to Download Instagram Reels</h2>
     <p>
-      Instagram Reels are short-form videos that often go viral. InstaDL lets you save any public
+      Instagram Reels are short-form videos that often go viral. InstaSaverHub lets you save any public
       Reel directly to your device in the original HD quality — no watermark, no registration.
     </p>
     <p>
       Simply open Instagram, find the Reel, tap the three-dot menu (⋯), select "Copy Link," then
-      paste the URL into InstaDL above. The Reel will be fetched and ready to download in seconds.
+      paste the URL into InstaSaverHub above. The Reel will be fetched and ready to download in seconds.
     </p>
-    <h3 className="font-display font-semibold text-white text-xl">Why Use InstaDL for Reels?</h3>
+    <h3 className="font-display font-semibold text-white text-xl">Why Use InstaSaverHub for Reels?</h3>
     <ul className="list-none space-y-2">
       {[
         "Downloads in original 1080p HD resolution",
@@ -42,7 +42,7 @@ const SEO_CONTENT = (
     </ul>
     <h3 className="font-display font-semibold text-white text-xl">Supported Reel Formats</h3>
     <p>
-      InstaDL downloads Reels as MP4 files, which play on all devices and media players.
+      InstaSaverHub downloads Reels as MP4 files, which play on all devices and media players.
       You can share them, re-upload for personal use, or keep them as offline memories.
     </p>
   </>

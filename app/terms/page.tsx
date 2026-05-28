@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — InstaDL",
-  description: "Terms of Service for using InstaDL, the free Instagram downloader.",
+  title: "Terms of Service — InstaSaverHub",
+  description: "Terms of Service for using InstaSaverHub, the free Instagram downloader.",
   alternates: { canonical: "/terms" },
 };
 
@@ -14,7 +14,7 @@ export default function TermsPage() {
           <p className="text-sm text-[#55555f] mb-2">Last updated: January 1, 2025</p>
           <h1 className="font-display font-bold text-4xl text-white mb-4">Terms of Service</h1>
           <p className="text-[#9090a8]">
-            By using InstaDL, you agree to these terms. Please read them carefully.
+            By using InstaSaverHub, you agree to these terms. Please read them carefully.
           </p>
         </div>
 
@@ -23,42 +23,42 @@ export default function TermsPage() {
             {
               title: "1. Acceptance of Terms",
               content:
-                "By accessing and using InstaDL, you accept and agree to be bound by these Terms of Service. If you do not agree, please do not use InstaDL.",
+                "By accessing and using InstaSaverHub, you accept and agree to be bound by these Terms of Service. If you do not agree, please do not use InstaSaverHub.",
             },
             {
               title: "2. Permitted Use",
               content:
-                "InstaDL is provided for personal, non-commercial use only. You may use InstaDL to download public Instagram content for personal viewing, archiving, and offline access. You may NOT use InstaDL to download content for redistribution, resale, or commercial use without explicit permission from the content creator.",
+                "InstaSaverHub is provided for personal, non-commercial use only. You may use InstaSaverHub to download public Instagram content for personal viewing, archiving, and offline access. You may NOT use InstaSaverHub to download content for redistribution, resale, or commercial use without explicit permission from the content creator.",
             },
             {
               title: "3. Content Responsibility",
               content:
-                "InstaDL only enables downloading of publicly available Instagram content. You are solely responsible for how you use downloaded content. You must respect copyright law and the intellectual property rights of content creators. Downloading or redistributing copyrighted content without permission may violate applicable laws.",
+                "InstaSaverHub only enables downloading of publicly available Instagram content. You are solely responsible for how you use downloaded content. You must respect copyright law and the intellectual property rights of content creators. Downloading or redistributing copyrighted content without permission may violate applicable laws.",
             },
             {
               title: "4. No Affiliation with Instagram",
               content:
-                "InstaDL is an independent tool and is not affiliated with, endorsed by, or connected to Instagram or Meta Platforms, Inc. Use of Instagram's name and trademark in describing this tool's functionality is purely descriptive.",
+                "InstaSaverHub is an independent tool and is not affiliated with, endorsed by, or connected to Instagram or Meta Platforms, Inc. Use of Instagram's name and trademark in describing this tool's functionality is purely descriptive.",
             },
             {
               title: "5. Service Availability",
               content:
-                "We strive for 99.9% uptime but do not guarantee uninterrupted service. Instagram may change its platform in ways that affect InstaDL's functionality. We are not liable for downtime or service interruptions.",
+                "We strive for 99.9% uptime but do not guarantee uninterrupted service. Instagram may change its platform in ways that affect InstaSaverHub's functionality. We are not liable for downtime or service interruptions.",
             },
             {
               title: "6. Limitation of Liability",
               content:
-                "InstaDL is provided 'as is' without any warranties. To the maximum extent permitted by law, InstaDL shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of the service.",
+                "InstaSaverHub is provided 'as is' without any warranties. To the maximum extent permitted by law, InstaSaverHub shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of the service.",
             },
             {
               title: "7. Prohibited Activities",
               content:
-                "You may not: use InstaDL to download private content, attempt to bypass Instagram's security measures, use automated scripts to mass-download content, or use InstaDL in any manner that violates applicable laws.",
+                "You may not: use InstaSaverHub to download private content, attempt to bypass Instagram's security measures, use automated scripts to mass-download content, or use InstaSaverHub in any manner that violates applicable laws.",
             },
             {
               title: "8. Changes to Terms",
               content:
-                "We reserve the right to modify these terms at any time. Continued use of InstaDL after changes constitutes acceptance of the new terms.",
+                "We reserve the right to modify these terms at any time. Continued use of InstaSaverHub after changes constitutes acceptance of the new terms.",
             },
           ].map((section) => (
             <div key={section.title} className="p-6 rounded-2xl bg-[#111118] border border-white/5">

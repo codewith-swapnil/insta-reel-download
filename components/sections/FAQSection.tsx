@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
   - FAQPage JSON-LD schema is injected inline AND synced exactly with visible text
     (Google cross-validates schema vs visible content — mismatch = manual penalty)
   - Questions target long-tail FAQ queries from Google's "People Also Ask" boxes
-  - Section h2 targets: "instagram downloader faq", "questions about instadl"
+  - Section h2 targets: "instagram downloader faq", "questions about InstaSaverHub"
   - Accordion uses aria-expanded for accessibility (also crawled by Googlebot)
   - First FAQ is pre-opened so the answer is in initial HTML (indexable without JS)
   - 12 FAQs cover broader topical depth than the original 8 (more PAA coverage)
@@ -21,36 +21,36 @@ import { cn } from "@/lib/utils";
 
 const FAQS = [
   {
-    q: "Is InstaDL completely free to use?",
-    a: "Yes — InstaDL is 100% free with no hidden costs, subscription fees, or premium tiers. You can download unlimited Instagram Reels, videos, photos, and carousels without paying anything, ever.",
+    q: "Is InstaSaverHub completely free to use?",
+    a: "Yes — InstaSaverHub is 100% free with no hidden costs, subscription fees, or premium tiers. You can download unlimited Instagram Reels, videos, photos, and carousels without paying anything, ever.",
   },
   {
     q: "Do I need an Instagram account to download content?",
-    a: "No. InstaDL works without any Instagram login or account. You only need the URL of the public Instagram post you want to download. We never ask for your Instagram credentials or personal information.",
+    a: "No. InstaSaverHub works without any Instagram login or account. You only need the URL of the public Instagram post you want to download. We never ask for your Instagram credentials or personal information.",
   },
   {
-    q: "Can I download Instagram Reels with InstaDL?",
-    a: "Yes. InstaDL is one of the fastest Instagram Reels downloaders available. Simply copy the Reel link from Instagram, paste it into InstaDL, and download the Reel in HD quality to your device — no app required.",
+    q: "Can I download Instagram Reels with InstaSaverHub?",
+    a: "Yes. InstaSaverHub is one of the fastest Instagram Reels downloaders available. Simply copy the Reel link from Instagram, paste it into InstaSaverHub, and download the Reel in HD quality to your device — no app required.",
   },
   {
     q: "How do I download Instagram videos on iPhone?",
-    a: "On iPhone, open Instagram, tap the three-dot menu (⋯) on the video or Reel, tap Share, then Copy Link. Open Safari and go to instadl.pro, paste the link into the input box, and tap Download. The video will be saved to your Photos app.",
+    a: "On iPhone, open Instagram, tap the three-dot menu (⋯) on the video or Reel, tap Share, then Copy Link. Open Safari and go to InstaSaverHub.pro, paste the link into the input box, and tap Download. The video will be saved to your Photos app.",
   },
   {
     q: "How do I download Instagram videos on Android?",
-    a: "On Android, open Instagram, tap the three-dot menu (⋯) on the post, tap Share → Copy Link. Open your browser and go to instadl.pro, paste the link into the input box, and tap Download. The file will be saved to your Downloads folder.",
+    a: "On Android, open Instagram, tap the three-dot menu (⋯) on the post, tap Share → Copy Link. Open your browser and go to InstaSaverHub.pro, paste the link into the input box, and tap Download. The file will be saved to your Downloads folder.",
   },
   {
     q: "Can I download private Instagram content?",
-    a: "No. InstaDL can only download content from public Instagram profiles and posts. Private accounts and content require user authentication that we do not collect, in line with Instagram's privacy policies. Only paste URLs from public profiles.",
+    a: "No. InstaSaverHub can only download content from public Instagram profiles and posts. Private accounts and content require user authentication that we do not collect, in line with Instagram's privacy policies. Only paste URLs from public profiles.",
   },
   {
-    q: "What quality does InstaDL download Instagram videos in?",
-    a: "InstaDL downloads media in the highest quality available from Instagram's servers — typically 1080p HD for videos and Reels, and full original resolution for photos. We fetch directly from Instagram's CDN and never compress or reduce quality.",
+    q: "What quality does InstaSaverHub download Instagram videos in?",
+    a: "InstaSaverHub downloads media in the highest quality available from Instagram's servers — typically 1080p HD for videos and Reels, and full original resolution for photos. We fetch directly from Instagram's CDN and never compress or reduce quality.",
   },
   {
-    q: "Does InstaDL add watermarks to downloaded videos?",
-    a: "Never. All downloads from InstaDL are clean and watermark-free, exactly as they appear on Instagram. We do not overlay any branding, logos, or text on your downloaded content.",
+    q: "Does InstaSaverHub add watermarks to downloaded videos?",
+    a: "Never. All downloads from InstaSaverHub are clean and watermark-free, exactly as they appear on Instagram. We do not overlay any branding, logos, or text on your downloaded content.",
   },
   {
     q: "Is it legal to download Instagram content?",
@@ -61,12 +61,12 @@ const FAQS = [
     a: "Make sure the URL is from a public Instagram post in the correct format (instagram.com/p/..., instagram.com/reel/..., or instagram.com/stories/...). Private accounts will not work. Also ensure you are copying the full URL, not just the username or caption. If problems persist, try copying the link again directly from the Instagram app.",
   },
   {
-    q: "What devices and browsers does InstaDL support?",
-    a: "InstaDL works on all modern browsers including Chrome, Firefox, Safari, and Edge — on any device. This includes iPhone, Android smartphones and tablets, Mac computers, Windows PCs, and Chromebooks. No app installation is needed.",
+    q: "What devices and browsers does InstaSaverHub support?",
+    a: "InstaSaverHub works on all modern browsers including Chrome, Firefox, Safari, and Edge — on any device. This includes iPhone, Android smartphones and tablets, Mac computers, Windows PCs, and Chromebooks. No app installation is needed.",
   },
   {
-    q: "Does InstaDL store my downloaded videos or personal data?",
-    a: "No. InstaDL does not store, log, or retain any downloaded media on our servers. All media is fetched transiently and delivered directly to your browser. We do not collect personal data or track your downloads. Your privacy is fully protected.",
+    q: "Does InstaSaverHub store my downloaded videos or personal data?",
+    a: "No. InstaSaverHub does not store, log, or retain any downloaded media on our servers. All media is fetched transiently and delivered directly to your browser. We do not collect personal data or track your downloads. Your privacy is fully protected.",
   },
 ];
 
@@ -112,7 +112,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-[#9090a8] text-lg">
-            Everything you need to know about downloading Instagram content with InstaDL.
+            Everything you need to know about downloading Instagram content with InstaSaverHub.
           </p>
         </div>
 

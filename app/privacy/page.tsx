@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — InstaDL",
-  description: "InstaDL's privacy policy. We don't collect personal data, store URLs, or track downloads.",
+  title: "Privacy Policy — InstaSaverHub",
+  description: "InstaSaverHub's privacy policy. We don't collect personal data, store URLs, or track downloads.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           {[
             {
               title: "1. Information We Collect",
-              content: `InstaDL is a frontend-only web application. We do not operate a backend server that processes or stores user data. When you use InstaDL:
+              content: `InstaSaverHub is a frontend-only web application. We do not operate a backend server that processes or stores user data. When you use InstaSaverHub:
               
 • We do NOT store the Instagram URLs you paste.
 • We do NOT store downloaded media on our servers.
@@ -37,27 +37,27 @@ We may collect anonymous analytics data (page views, geographic region) through 
             {
               title: "2. Cookies",
               content:
-                "InstaDL uses minimal cookies necessary for site functionality. We do not use tracking cookies, advertising cookies, or any cross-site tracking mechanisms. You can disable cookies in your browser without affecting the core functionality of InstaDL.",
+                "InstaSaverHub uses minimal cookies necessary for site functionality. We do not use tracking cookies, advertising cookies, or any cross-site tracking mechanisms. You can disable cookies in your browser without affecting the core functionality of InstaSaverHub.",
             },
             {
               title: "3. Third-Party Services",
               content:
-                "InstaDL fetches media from Instagram's public CDN servers on your behalf. We do not pass your personal data to Instagram or any third parties. Instagram's own privacy policy governs their data practices.",
+                "InstaSaverHub fetches media from Instagram's public CDN servers on your behalf. We do not pass your personal data to Instagram or any third parties. Instagram's own privacy policy governs their data practices.",
             },
             {
               title: "4. Data Security",
               content:
-                "Since we don't collect or store personal data, there is minimal risk of a data breach affecting you. All connections to InstaDL are secured via HTTPS/TLS encryption.",
+                "Since we don't collect or store personal data, there is minimal risk of a data breach affecting you. All connections to InstaSaverHub are secured via HTTPS/TLS encryption.",
             },
             {
               title: "5. Children's Privacy",
               content:
-                "InstaDL is not directed at children under 13 years of age. We do not knowingly collect information from children. If you believe a child has used our service, please contact us.",
+                "InstaSaverHub is not directed at children under 13 years of age. We do not knowingly collect information from children. If you believe a child has used our service, please contact us.",
             },
             {
               title: "6. Changes to This Policy",
               content:
-                "We may update this privacy policy from time to time. We'll update the 'Last updated' date at the top of this page when we do. Continued use of InstaDL after changes constitutes acceptance of the updated policy.",
+                "We may update this privacy policy from time to time. We'll update the 'Last updated' date at the top of this page when we do. Continued use of InstaSaverHub after changes constitutes acceptance of the updated policy.",
             },
             {
               title: "7. Contact Us",

@@ -25,13 +25,13 @@ const FEATURES = [
     icon: <Zap className="w-5 h-5" aria-hidden="true" />,
     title: "Blazing Fast Downloads",
     description:
-      "InstaDL fetches Instagram media in under 2 seconds. No waiting, no queues — your Reels and videos are ready to download almost instantly.",
+      "InstaSaverHub fetches Instagram media in under 2 seconds. No waiting, no queues — your Reels and videos are ready to download almost instantly.",
   },
   {
     icon: <Shield className="w-5 h-5" aria-hidden="true" />,
     title: "100% Free, No Hidden Fees",
     description:
-      "InstaDL is completely free with no subscription, no premium tier, and no usage limits. Download unlimited Instagram content at no cost, forever.",
+      "InstaSaverHub is completely free with no subscription, no premium tier, and no usage limits. Download unlimited Instagram content at no cost, forever.",
   },
   {
     icon: <Lock className="w-5 h-5" aria-hidden="true" />,
@@ -61,13 +61,13 @@ const FEATURES = [
     icon: <Sparkles className="w-5 h-5" aria-hidden="true" />,
     title: "All Instagram Content Types",
     description:
-      "Reels, IGTV videos, photos, carousel posts, highlights, and stories — InstaDL supports every public Instagram content type in one tool.",
+      "Reels, IGTV videos, photos, carousel posts, highlights, and stories — InstaSaverHub supports every public Instagram content type in one tool.",
   },
   {
     icon: <Clock className="w-5 h-5" aria-hidden="true" />,
     title: "99.9% Uptime Guarantee",
     description:
-      "InstaDL is available 24/7 with industry-leading uptime. Download Instagram media whenever you need, day or night, with no scheduled downtime.",
+      "InstaSaverHub is available 24/7 with industry-leading uptime. Download Instagram media whenever you need, day or night, with no scheduled downtime.",
   },
 ];
 
@@ -82,7 +82,7 @@ export function FeaturesSection() {
         {/* ✅ h2 targets "best instagram downloader" + E-E-A-T signals */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-[#f72585] uppercase tracking-widest mb-3">
-            Why Millions Choose InstaDL
+            Why Millions Choose InstaSaverHub
           </p>
           <h2
             id="features-heading"
@@ -99,7 +99,7 @@ export function FeaturesSection() {
         {/* ✅ Semantic list for accessible, keyword-rich feature grid */}
         <ul
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 list-none"
-          aria-label="InstaDL features and benefits"
+          aria-label="InstaSaverHub features and benefits"
         >
           {FEATURES.map((f) => (
             <li key={f.title}>
@@ -122,7 +122,7 @@ export function FeaturesSection() {
 
         {/* ✅ Trust reinforcement paragraph — E-E-A-T Trustworthiness signal */}
         <p className="text-center text-[#55555f] text-xs mt-10 max-w-2xl mx-auto">
-          InstaDL does not store, collect, or sell any user data. We do not retain
+          InstaSaverHub does not store, collect, or sell any user data. We do not retain
           downloaded media on our servers. All downloads are processed transiently
           and securely over HTTPS.
         </p>

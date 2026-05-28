@@ -14,7 +14,7 @@ const SEO_CONTENT = (
     <h2 className="font-display font-bold text-white text-2xl">Download Instagram Highlights</h2>
     <p>
       Instagram Highlights are curated collections of stories that stay permanently on a profile.
-      InstaDL allows you to save individual highlight items from any public Instagram profile.
+      InstaSaverHub allows you to save individual highlight items from any public Instagram profile.
     </p>
     <h3 className="font-display font-semibold text-white text-xl">How to Get the Highlight URL</h3>
     <ul className="list-none space-y-2">
@@ -23,7 +23,7 @@ const SEO_CONTENT = (
         "Tap on any Highlight circle below the bio",
         "In a browser: copy the URL from the address bar",
         "In the app: tap the three dots → Share → Copy link",
-        "Paste into InstaDL and hit Download",
+        "Paste into InstaSaverHub and hit Download",
       ].map((step, i) => (
         <li key={step} className="flex items-start gap-2">
           <span className="text-[#ffbe0b] font-mono mt-0.5">{i + 1}.</span>
@@ -33,7 +33,7 @@ const SEO_CONTENT = (
     </ul>
     <p className="mt-4">
       Note: Only public Instagram highlights can be downloaded. Private account highlights
-      require account authentication which InstaDL does not collect.
+      require account authentication which InstaSaverHub does not collect.
     </p>
   </>
 );

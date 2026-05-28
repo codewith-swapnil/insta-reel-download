@@ -14,7 +14,7 @@ const SEO_CONTENT = (
     <h2 className="font-display font-bold text-white text-2xl">Download Instagram Videos in HD</h2>
     <p>
       Instagram supports various video formats — from short clips in feed posts to long-form IGTV
-      content. InstaDL supports downloading all types of public Instagram videos in the highest
+      content. InstaSaverHub supports downloading all types of public Instagram videos in the highest
       available resolution.
     </p>
     <h3 className="font-display font-semibold text-white text-xl">Supported Video Types</h3>
@@ -34,7 +34,7 @@ const SEO_CONTENT = (
     <h3 className="font-display font-semibold text-white text-xl">Download Steps</h3>
     <p>
       Copy the Instagram video URL from your browser or the app's share menu, paste it into
-      InstaDL's input box, click Download, preview the video, and save it to your device. The
+      InstaSaverHub's input box, click Download, preview the video, and save it to your device. The
       whole process takes under 5 seconds.
     </p>
   </>

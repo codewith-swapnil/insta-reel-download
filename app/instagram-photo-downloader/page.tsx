@@ -13,13 +13,13 @@ const SEO_CONTENT = (
   <>
     <h2 className="font-display font-bold text-white text-2xl">Save Instagram Photos in Full Resolution</h2>
     <p>
-      Instagram compresses photos when viewed in-app. InstaDL fetches photos directly from
+      Instagram compresses photos when viewed in-app. InstaSaverHub fetches photos directly from
       Instagram's CDN at the highest resolution stored — typically 1080×1080 for square posts
       and up to 1440px for portrait or landscape images.
     </p>
     <h3 className="font-display font-semibold text-white text-xl">Download Carousel Posts</h3>
     <p>
-      Carousel posts can contain up to 10 photos or videos in a single post. InstaDL
+      Carousel posts can contain up to 10 photos or videos in a single post. InstaSaverHub
       automatically detects carousels and lets you download each item individually or all at once
       with a single click. No need to screenshot each slide.
     </p>

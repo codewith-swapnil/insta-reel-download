@@ -43,7 +43,7 @@ export function CTASection() {
 
         {/* ✅ Supporting copy — secondary keywords + social proof */}
         <p className="text-[#9090a8] text-lg mb-4 max-w-lg mx-auto">
-          Join over 10 million users who use InstaDL to download Instagram Reels,
+          Join over 10 million users who use InstaSaverHub to download Instagram Reels,
           Videos, Photos, and Carousels in HD — free, no login, no watermark.
         </p>
 
@@ -57,7 +57,7 @@ export function CTASection() {
           <Link
             href="/#downloader"
             className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-[#f72585] to-[#9b5de5] text-white font-display font-semibold text-base shadow-2xl hover:shadow-pink-500/30 hover:scale-105 transition-all duration-300"
-            aria-label="Download Instagram Videos, Reels and Photos for free with InstaDL"
+            aria-label="Download Instagram Videos, Reels and Photos for free with InstaSaverHub"
           >
             <Download className="w-5 h-5" aria-hidden="true" />
             {/* ✅ Keyword-rich anchor text — NOT "Click here" */}
@@ -67,9 +67,9 @@ export function CTASection() {
           <Link
             href="/about"
             className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-white/5 border border-white/10 text-white font-display font-semibold text-base hover:bg-white/10 hover:scale-105 transition-all duration-300"
-            aria-label="Learn more about InstaDL Instagram Downloader"
+            aria-label="Learn more about InstaSaverHub Instagram Downloader"
           >
-            About InstaDL
+            About InstaSaverHub
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>

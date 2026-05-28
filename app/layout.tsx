@@ -7,12 +7,12 @@ import { Analytics } from "@vercel/analytics/next";
 /* ─────────────────────────────────────────────────────────
    SITE CONSTANTS
    ───────────────────────────────────────────────────────── */
-const SITE_URL  = "https://instadl.pro";
-const SITE_NAME = "InstaDL";
+const SITE_URL  = "https://instasaverhub.vercel.app";
+const SITE_NAME = "InstaSaverHub";
 
 // ✅ SEO RULE 1: Primary keyword FIRST in title — Google weights front-loaded words
 const PAGE_TITLE =
-  "Instagram Downloader — Free HD Reels, Videos & Photos | InstaDL";
+  "Instagram Downloader — Free HD Reels, Videos & Photos | InstaSaverHub";
 
 // ✅ SEO RULE 2: Description < 155 chars, keyword in first 10 words, strong CTA
 const PAGE_DESCRIPTION =
@@ -24,7 +24,7 @@ const PAGE_DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
-  // ✅ Title template — every page auto-gets " | InstaDL" suffix
+  // ✅ Title template — every page auto-gets " | InstaSaverHub" suffix
   title: {
     default:  PAGE_TITLE,
     template: `%s | ${SITE_NAME}`,
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
         url:    "/og-image.png",
         width:  1200,
         height: 630,
-        alt:    "InstaDL — Free Instagram Downloader. No Login. No Watermark.",
+        alt:    "InstaSaverHub — Free Instagram Downloader. No Login. No Watermark.",
         type:   "image/png",
       },
     ],
@@ -107,8 +107,8 @@ export const metadata: Metadata = {
   // ✅ SEO RULE 8: Twitter card — large image card gets 2-3x more clicks than summary
   twitter: {
     card:        "summary_large_image",
-    site:        "@instadl",
-    creator:     "@instadl",
+    site:        "@InstaSaverHub",
+    creator:     "@InstaSaverHub",
     title:       PAGE_TITLE,
     description: PAGE_DESCRIPTION,
     images:      ["/og-image.png"],
@@ -151,7 +151,7 @@ const schemaWebApp = {
   "@context":           "https://schema.org",
   "@type":              "WebApplication",
   "@id":                `${SITE_URL}/#webapp`,
-  name:                 "InstaDL Instagram Downloader",
+  name:                 "InstaSaverHub Instagram Downloader",
   url:                  SITE_URL,
   description:          PAGE_DESCRIPTION,
   applicationCategory:  "UtilitiesApplication",
@@ -195,7 +195,7 @@ const schemaHowTo = {
   description:
     "Download any Instagram media for free in 3 easy steps. No login or app required.",
   totalTime: "PT30S",
-  tool: [{ "@type": "HowToTool", name: "InstaDL Instagram Downloader" }],
+  tool: [{ "@type": "HowToTool", name: "InstaSaverHub Instagram Downloader" }],
   step: [
     {
       "@type":   "HowToStep",
@@ -207,8 +207,8 @@ const schemaHowTo = {
     {
       "@type":   "HowToStep",
       position:  2,
-      name:      "Paste the URL into InstaDL",
-      text:      "Go to instadl.pro and paste the copied Instagram URL into the input field.",
+      name:      "Paste the URL into InstaSaverHub",
+      text:      "Go to InstaSaverHub.pro and paste the copied Instagram URL into the input field.",
       image:     `${SITE_URL}/how-to-step-2.png`,
     },
     {
@@ -228,10 +228,10 @@ const schemaFAQ = {
   mainEntity: [
     {
       "@type":          "Question",
-      name:             "Is InstaDL free to use?",
+      name:             "Is InstaSaverHub free to use?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:    "Yes. InstaDL is 100% free with no hidden charges, subscriptions, or premium tiers. All features are available at no cost.",
+        text:    "Yes. InstaSaverHub is 100% free with no hidden charges, subscriptions, or premium tiers. All features are available at no cost.",
       },
     },
     {
@@ -247,7 +247,7 @@ const schemaFAQ = {
       name:             "Can I download Instagram Reels without a watermark?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:    "Yes. InstaDL downloads Instagram Reels, videos, and photos without any watermark, exactly as the original content.",
+        text:    "Yes. InstaSaverHub downloads Instagram Reels, videos, and photos without any watermark, exactly as the original content.",
       },
     },
     {
@@ -263,7 +263,7 @@ const schemaFAQ = {
       name:             "Is it safe to use an Instagram downloader?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:    "InstaDL does not ask for your Instagram credentials or personal data. Only the public URL is processed. Your privacy is fully protected.",
+        text:    "InstaSaverHub does not ask for your Instagram credentials or personal data. Only the public URL is processed. Your privacy is fully protected.",
       },
     },
     {
@@ -271,7 +271,7 @@ const schemaFAQ = {
       name:             "What quality are the downloaded videos?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:    "InstaDL downloads videos in the highest quality available — typically HD (1080p) or the original resolution uploaded by the creator.",
+        text:    "InstaSaverHub downloads videos in the highest quality available — typically HD (1080p) or the original resolution uploaded by the creator.",
       },
     },
     {
@@ -279,7 +279,7 @@ const schemaFAQ = {
       name:             "Can I download Instagram videos on my phone?",
       acceptedAnswer: {
         "@type": "Answer",
-        text:    "Yes. InstaDL works on all devices including iPhone, Android, tablets, and desktop computers — no app installation needed.",
+        text:    "Yes. InstaSaverHub works on all devices including iPhone, Android, tablets, and desktop computers — no app installation needed.",
       },
     },
     {
@@ -307,7 +307,7 @@ const schemaOrg = {
     height:        512,
   },
   sameAs: [
-    "https://twitter.com/instadl",
+    "https://twitter.com/InstaSaverHub",
   ],
 };
 

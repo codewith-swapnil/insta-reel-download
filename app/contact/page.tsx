@@ -36,7 +36,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-white text-sm font-semibold">Email</p>
-              <p className="text-[#55555f] text-xs">hello@instadl.pro</p>
+              <p className="text-[#55555f] text-xs">hello@InstaSaverHub.pro</p>
             </div>
           </div>
           <div className="p-5 rounded-2xl bg-[#111118] border border-white/5 flex items-center gap-3">

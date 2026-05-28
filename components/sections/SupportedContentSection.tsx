@@ -82,7 +82,7 @@ const itemListSchema = {
     position: i + 1,
     name: item.title,
     description: item.description,
-    url: `https://instadl.pro${item.href}`,
+    url: `https://instasaverhub.vercel.app${item.href}`,
   })),
 };
 

@@ -37,12 +37,12 @@ export function SEOContentSection() {
 
           {/* ✅ Opening paragraph — primary keyword in first sentence */}
           <p>
-            <strong className="text-white">InstaDL</strong> is the fastest and most
+            <strong className="text-white">InstaSaverHub</strong> is the fastest and most
             reliable free Instagram Downloader available online today. Whether you need
             to save Instagram Reels, download Instagram videos, grab full-resolution
-            photos, or download entire carousel posts — InstaDL handles every content
+            photos, or download entire carousel posts — InstaSaverHub handles every content
             type with a single URL paste. There is no registration required, no app to
-            install, and absolutely no watermarks added to your downloads. InstaDL
+            install, and absolutely no watermarks added to your downloads. InstaSaverHub
             works directly in your browser and is completely free to use with no
             hidden fees or usage limits.
           </p>
@@ -54,13 +54,13 @@ export function SEOContentSection() {
             </h3>
             <p>
               Instagram Reels are short-form videos that often contain music, tutorials,
-              comedy, and viral content that users want to save offline. With InstaDL,
+              comedy, and viral content that users want to save offline. With InstaSaverHub,
               downloading Instagram Reels is quick and straightforward. Open the Instagram
               app, navigate to the Reel you want to save, tap the three-dot menu (⋯), then
-              select Share → Copy Link. Paste the copied link into the InstaDL input box on
+              select Share → Copy Link. Paste the copied link into the InstaSaverHub input box on
               this page and press the Download button. Your Reel will be fetched in HD
               quality — up to 1080p — and ready to save to your device in seconds.
-              InstaDL is one of the only Instagram Reels downloaders that delivers
+              InstaSaverHub is one of the only Instagram Reels downloaders that delivers
               original quality without any compression.
             </p>
           </div>
@@ -72,7 +72,7 @@ export function SEOContentSection() {
             </h3>
             <p>
               Most Instagram video downloader tools compress media files before delivering
-              them, resulting in blurry, pixelated videos. InstaDL is different: it fetches
+              them, resulting in blurry, pixelated videos. InstaSaverHub is different: it fetches
               content directly from Instagram's global CDN servers, ensuring you always
               receive the original file at the highest resolution available. For regular
               Instagram video posts and IGTV content, this typically means 1080p HD for
@@ -92,10 +92,10 @@ export function SEOContentSection() {
             <p>
               Carousel posts on Instagram contain between 2 and 10 photos or videos
               presented in a single swipeable post. Saving each item individually can be
-              time-consuming. InstaDL automatically detects carousel posts and presents
+              time-consuming. InstaSaverHub automatically detects carousel posts and presents
               all slides simultaneously, letting you download every photo and video in
               one session. You can also download individual carousel items if you only
-              need specific slides. This makes InstaDL the most efficient{" "}
+              need specific slides. This makes InstaSaverHub the most efficient{" "}
               <Link
                 href="/instagram-photo-downloader"
                 className="text-[#f72585] hover:text-[#ff5fa3] transition-colors underline decoration-[#f72585]/30"
@@ -115,7 +115,7 @@ export function SEOContentSection() {
               Instagram Highlights are collections of Stories that a user pins to their
               profile permanently. Unlike regular Stories that disappear after 24 hours,
               Highlights remain visible indefinitely — but Instagram provides no built-in
-              way to download them. InstaDL solves this by supporting direct{" "}
+              way to download them. InstaSaverHub solves this by supporting direct{" "}
               <Link
                 href="/instagram-highlight-downloader"
                 className="text-[#f72585] hover:text-[#ff5fa3] transition-colors underline decoration-[#f72585]/30"
@@ -123,7 +123,7 @@ export function SEOContentSection() {
                 Instagram Highlights download
               </Link>{" "}
               for any public profile. Simply copy the Highlight URL from your browser's
-              address bar and paste it into InstaDL to save each story in the Highlight
+              address bar and paste it into InstaSaverHub to save each story in the Highlight
               to your device.
             </p>
           </div>
@@ -134,12 +134,12 @@ export function SEOContentSection() {
               Instagram Downloader for iPhone (iOS)
             </h3>
             <p>
-              Downloading Instagram content on iPhone is fully supported by InstaDL. Open
-              Safari on your iPhone, go to instadl.pro, and paste any public Instagram
+              Downloading Instagram content on iPhone is fully supported by InstaSaverHub. Open
+              Safari on your iPhone, go to InstaSaverHub.pro, and paste any public Instagram
               post URL. After tapping Download, a preview will appear. Long-press the
               video or image and select Save to Photos to add it to your iPhone camera
               roll. For videos, you may need to tap the share icon and choose Save Video.
-              InstaDL works on all iOS versions that support Safari, including iPhone and
+              InstaSaverHub works on all iOS versions that support Safari, including iPhone and
               iPad — no app installation needed, no App Store required.
             </p>
           </div>
@@ -151,10 +151,10 @@ export function SEOContentSection() {
             </h3>
             <p>
               Android users can download Instagram content directly from any browser —
-              Chrome, Firefox, or Samsung Internet. Open instadl.pro in your browser,
+              Chrome, Firefox, or Samsung Internet. Open InstaSaverHub.pro in your browser,
               paste your Instagram URL, and tap Download. The file will be saved to your
               phone's Downloads folder automatically. From there you can move the file to
-              your Gallery. InstaDL supports all Android versions from Android 6 and above
+              your Gallery. InstaSaverHub supports all Android versions from Android 6 and above
               and works on phones, tablets, and Android-based devices from all major
               manufacturers including Samsung, Google Pixel, OnePlus, and Xiaomi.
             </p>
@@ -168,9 +168,9 @@ export function SEOContentSection() {
             <p>
               To download Instagram videos and Reels on a Windows PC or Mac, open any
               modern browser (Chrome, Firefox, Edge, or Safari on Mac) and navigate to
-              instadl.pro. Paste the Instagram post URL and click Download. Files will
+              InstaSaverHub.pro. Paste the Instagram post URL and click Download. Files will
               save to your default Downloads folder. There is no software to install —
-              InstaDL runs entirely in the browser. For bulk downloading or content
+              InstaSaverHub runs entirely in the browser. For bulk downloading or content
               from specific accounts, you can open multiple tabs and process multiple
               URLs simultaneously.
             </p>
@@ -182,12 +182,12 @@ export function SEOContentSection() {
               Safe, Private &amp; Secure Downloads
             </h3>
             <p>
-              InstaDL is designed with your privacy as a top priority. We do not collect
+              InstaSaverHub is designed with your privacy as a top priority. We do not collect
               personal information, do not store downloaded media on our servers, and do
               not require any account creation. All data is transmitted over HTTPS to
               ensure your connection is encrypted. The URLs you paste are used solely to
               fetch the requested media from Instagram and are not logged or retained.
-              InstaDL will never ask for your Instagram username, password, or two-factor
+              InstaSaverHub will never ask for your Instagram username, password, or two-factor
               authentication codes. This makes it one of the most secure and private
               Instagram downloader tools available online.
             </p>

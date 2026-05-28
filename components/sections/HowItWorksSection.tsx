@@ -21,9 +21,9 @@ const STEPS = [
   },
   {
     step: "02",
-    title: "Paste the URL into InstaDL",
+    title: "Paste the URL into InstaSaverHub",
     description:
-      "Paste the copied Instagram URL into the input box at the top of this page and press the Download button. InstaDL instantly fetches the media directly from Instagram's servers.",
+      "Paste the copied Instagram URL into the input box at the top of this page and press the Download button. InstaSaverHub instantly fetches the media directly from Instagram's servers.",
     detail: "Paste URL → Click Download → Media fetched in under 2 seconds",
     color: "#9b5de5",
     keywords: "paste instagram url, instagram downloader input, fetch instagram media",
@@ -45,12 +45,12 @@ const howToSchema = {
   "@type": "HowTo",
   name: "How to Download Instagram Videos, Reels & Photos for Free",
   description:
-    "Learn how to download any Instagram Reel, Video, Photo, or Carousel in HD quality for free using InstaDL — no login, no watermark, no app required.",
+    "Learn how to download any Instagram Reel, Video, Photo, or Carousel in HD quality for free using InstaSaverHub — no login, no watermark, no app required.",
   totalTime: "PT1M",
   tool: [
     {
       "@type": "HowToTool",
-      name: "InstaDL Instagram Downloader",
+      name: "InstaSaverHub Instagram Downloader",
     },
   ],
   step: [
@@ -59,24 +59,24 @@ const howToSchema = {
       position: 1,
       name: "Copy the Instagram URL",
       text: "Open Instagram, find the Reel, Video, or Photo you want to download. Tap the three-dot menu (⋯) on the post, then tap Share → Copy Link to copy the post URL.",
-      url: "https://instadl.pro/#how-it-works",
-      image: "https://instadl.pro/how-to-step-1.jpg",
+      url: "https://instasaverhub.vercel.app/#how-it-works",
+      image: "https://instasaverhub.vercel.app/how-to-step-1.jpg",
     },
     {
       "@type": "HowToStep",
       position: 2,
-      name: "Paste the URL into InstaDL",
-      text: "Paste the copied Instagram URL into the input box at the top of the InstaDL page and press the Download button. The media will be fetched instantly.",
-      url: "https://instadl.pro/#how-it-works",
-      image: "https://instadl.pro/how-to-step-2.jpg",
+      name: "Paste the URL into InstaSaverHub",
+      text: "Paste the copied Instagram URL into the input box at the top of the InstaSaverHub page and press the Download button. The media will be fetched instantly.",
+      url: "https://instasaverhub.vercel.app/#how-it-works",
+      image: "https://instasaverhub.vercel.app/how-to-step-2.jpg",
     },
     {
       "@type": "HowToStep",
       position: 3,
       name: "Download & Save to Your Device",
       text: "Preview the media and click the download button to save it to your device in HD quality — up to 1080p for videos and full resolution for photos. No watermark added.",
-      url: "https://instadl.pro/#how-it-works",
-      image: "https://instadl.pro/how-to-step-3.jpg",
+      url: "https://instasaverhub.vercel.app/#how-it-works",
+      image: "https://instasaverhub.vercel.app/how-to-step-3.jpg",
     },
   ],
 };
@@ -169,7 +169,7 @@ export function HowItWorksSection() {
 
         {/* ✅ Supplementary text — helps Google understand topical relevance */}
         <p className="text-center text-[#55555f] text-sm mt-10 max-w-lg mx-auto">
-          InstaDL works on all devices. Whether you want to download Instagram Reels on iPhone,
+          InstaSaverHub works on all devices. Whether you want to download Instagram Reels on iPhone,
           save videos on Android, or download Instagram content on your PC — the process is
           identical and takes under 60 seconds.
         </p>

@@ -12,13 +12,13 @@ import { CTASection } from "@/components/sections/CTASection";
    (overrides layout defaults for the home page specifically)
 
    ✅ SEO RULE: Home page gets its OWN optimized title/description
-   because layout.tsx title.template would append " | InstaDL"
+   because layout.tsx title.template would append " | InstaSaverHub"
    but we want to control the FULL home page title manually.
    ───────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
   // ✅ Keyword-first title. Under 60 chars. Includes brand at end.
   // Formula: [Primary KW] + [Unique Differentiator] + [Brand]
-  title: "Instagram Downloader — Free HD, No Login, No Watermark | InstaDL",
+  title: "Instagram Downloader — Free HD, No Login, No Watermark | InstaSaverHub",
 
   // ✅ Description: 140-155 chars, includes 3 primary keywords, ends with action verb
   // Targets: "instagram downloader", "download reels", "no watermark"
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
 
   // ✅ Canonical for the home page — prevents / vs /index conflict
   alternates: {
-    canonical: "https://instadl.pro",
+    canonical: "https://instasaverhub.vercel.app",
   },
 
   // ✅ Open Graph override — home page OG should be more specific than layout fallback
   openGraph: {
-    title:       "Instagram Downloader — Free HD, No Login, No Watermark | InstaDL",
+    title:       "Instagram Downloader — Free HD, No Login, No Watermark | InstaSaverHub",
     description: "The fastest Instagram Downloader. Save Reels, Videos, Photos & Carousels in HD. No login. No watermark. Free forever.",
-    url:         "https://instadl.pro",
+    url:         "https://instasaverhub.vercel.app",
     type:        "website",
   },
 };
