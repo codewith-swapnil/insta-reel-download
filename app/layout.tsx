@@ -130,7 +130,7 @@ export const metadata: Metadata = {
 
   // ✅ SEO RULE 10: Verification — submit to all search engines
   verification: {
-    google: "0943dc92510d531f",  // replace after GSC verification
+    google: "google0943dc92510d531f",  // replace after GSC verification
     yandex: "YOUR_YANDEX_TOKEN",                 // covers Russian market
     other: {
       "msvalidate.01": "YOUR_BING_TOKEN",         // Bing Webmaster Tools
