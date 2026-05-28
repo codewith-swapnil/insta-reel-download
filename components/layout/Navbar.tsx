@@ -39,7 +39,7 @@ export function Navbar() {
             <Download className="w-4 h-4 text-white" strokeWidth={2.5} />
           </div>
           <span className="font-display font-semibold text-lg text-white">
-            Insta<span className="text-gradient">DL</span>
+            Insta<span className="text-gradient">SaverHub</span>
           </span>
         </Link>
 
