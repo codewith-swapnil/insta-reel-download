@@ -118,19 +118,19 @@ export const metadata: Metadata = {
   icons: {
     icon:     [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon1.png", sizes: "96x96", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
-    apple:    "/apple-touch-icon.png",
+    apple:    "/apple-icon.png",
     other: [
-      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#f72585" },
+      { rel: "mask-icon", url: "/icon0.svg", color: "#f72585" },
     ],
   },
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.json",
 
   // ✅ SEO RULE 10: Verification — submit to all search engines
   verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN",  // replace after GSC verification
+    google: "0943dc92510d531f",  // replace after GSC verification
     yandex: "YOUR_YANDEX_TOKEN",                 // covers Russian market
     other: {
       "msvalidate.01": "YOUR_BING_TOKEN",         // Bing Webmaster Tools
